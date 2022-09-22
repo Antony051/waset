@@ -10,10 +10,6 @@ import zipfile
 import tempfile
 import plotly.express as px
 
-# email = "greppo-app@jak-streamlit.iam.gserviceaccount.com"
-# key_file = "private-key.json"
-
-# credentials = ee.ServiceAccountCredentials(email=email, key_file=key_file)
 # ee.Initialize(credentials)
 geemap.ee_initialize()
 st.set_page_config(layout="wide")

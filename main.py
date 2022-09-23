@@ -18,12 +18,15 @@ st.title("Water Spread Area Estimation Tool (WASET)")
 
 st.sidebar.info(
     "This web app was developed by Antony Kishoare J, a Research Scholar under Dr. E. Arunbabu at Centre for Water Resources, Anna University")
+st.sidebar.markdown("Contact [email](a060697.ak@gmail.com)")
+st.sidebar.markdown(" For further discussions please visit [GitHub Disscussions](https://github.com/Antony051/waset/discussions)")
 
 st.write("This app is developed to calculate the water spread area of any water body.")
 
 st.info(
     "There are two ways to use this app. If you have the shapefile of the water body, you can directly upload the file and the output will be generated.")
-st.info("The second method allows to draw a polygon around any water body and the output will be generated.")
+st.info('The second way is to use the interactive map to select the water body. To do this, first draw a polygon around the desired water body using the tools provided in the interactive map. Then, export the file and upload it to the app under the state "NO" shapefile. The app will automatically delineate the water body and the outputs will be generated')
+
 
 Map = geemap.Map(locate_control=True, plugin_ScaleBar=True,plugin_Draw=False,  plugin_FullScreen=True, center=[13, 80],zoom=10)
 plugins.Draw(export=True).add_to(Map)
